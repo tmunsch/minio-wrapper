@@ -18,7 +18,7 @@ yum -y install wget
 # Usage
 
 ## One liner
-`wget https://github.com/tmunsch/minio-wrapper/raw/main/mwrapper.sh && chmod +x mwrapper.sh && bash mwrapper.sh normal 9000`
+`wget https://github.com/tmunsch/minio-wrapper/raw/main/mwrapper.sh && chmod +x mwrapper.sh && bash mwrap.sh normal 9000`
 
 ## Normal Usage
 
