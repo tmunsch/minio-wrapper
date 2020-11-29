@@ -1,7 +1,9 @@
 #!/bin/bash
 ##################################
+
 STARTUP_TYPE=$1
 SERVER_PORT=$2
+
 echo "######################################"
 echo "#         MINIO WRAPPER V1.1         #"
 echo "#               by                   #"
@@ -9,11 +11,13 @@ echo "#            tmunsch                 #"
 echo "######################################"
 echo Starting up....
 sleep 2
+
 function installed {
 if [ -f "minio" ]; then
 echo Minio detected...
 echo Moving on...
 else
+
 echo Minio not detected!
 echo Installing latest version of minio...
 wget https://dl.min.io/server/minio/release/linux-amd64/minio
@@ -29,6 +33,9 @@ echo  Booting in $1 mode on port $2
 sleep 2
 fi
 function startup {
+if [ ! -d "keys" ]; then
+mkdir keys
+fi
 mkdir keys
 echo Starting up....
 echo "Startup Type: (normal/rotate)"
