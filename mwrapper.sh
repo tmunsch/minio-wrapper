@@ -21,7 +21,6 @@ chmod +x minio
 echo Minio Installed!
 fi
 }
-function optioncheck {
 if  [ -z "$1" ] && [ -z "$2" ]; then
 echo  No Startup Options....Shutting Down
 exit
@@ -29,7 +28,6 @@ else
 echo  Booting in $1 mode on port $2
 sleep 2
 fi
-}
 function startup {
 mkdir keys
 echo Starting up....
