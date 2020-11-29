@@ -55,7 +55,6 @@ fi
 if [ -f "keys/oldsecret.txt" ]; then
 echo "Old secret file detected..."
 export MINIO_SECRET_KEY_OLD=`cat keys/oldsecret.txt`
-else
 fi
 if [ -f "keys/oldkey.txt" ]; then
 echo "Old key file detected..."
