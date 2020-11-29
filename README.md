@@ -22,8 +22,14 @@ yum -y install wget
 
 ## Normal Usage
 
-mwrapper.sh {normal/rotate} {port}
+./mwrap {normal/rotate} {port}
 
-## Example
-mwrapper.sh normal 9000
+## Normal Usage Example
+./mwrap normal 9000
+
+## Rotation of Keys
+
+./mwrap rotate 9000
+
+
 
