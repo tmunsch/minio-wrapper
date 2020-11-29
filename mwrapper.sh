@@ -92,5 +92,4 @@ else
 fi
 }
 installed
-optioncheck
 startup
