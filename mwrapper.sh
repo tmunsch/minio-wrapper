@@ -1,7 +1,25 @@
 #!/bin/bash
 ##################################
+STARTUP_TYPE=$1
+SERVER_PORT=$2
+echo "######################################"
+echo "#         MINIO WRAPPER V1.0         #"
+echo "#               by                   #"
+echo "#            tmunsch                 #"
+echo "######################################"
+echo Starting up....
+sleep 2
+if  [ -z "$1" ] && [ -z "$2" ]; then
+echo  No Startup Options....Shutting Down
+exit
+else
+echo  Booting in $1 mode on port $2
+sleep 2
+fi
+function startup {
 echo Starting up....
 echo "Startup Type: (normal/rotate)"
+#read STARTUP_TYPE
 echo Detected $STARTUP_TYPE
 if [ -f "key.txt" ]; then
 echo "Key file detected..."
@@ -61,3 +79,5 @@ echo Booting...
 else
 ./minio server data --address 0.0.0.0:$SERVER_PORT
 fi
+}
+startup
